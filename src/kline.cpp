@@ -7,8 +7,7 @@
 
 const int kDataLineNum = 2 * 60; // 1分钟k线所需行数(末尾不足一分钟的舍去了)
 
-void TickToKlineHelper::KLineFromLocalData(const std::string &sFilePath, const std::string &dFilePath)
-{
+void TickToKlineHelper::KLineFromLocalData(const std::string &sFilePath, const std::string &dFilePath) {
 	// 先清理残留数据
 	m_priceVec.clear();
 	m_volumeVec.clear();
@@ -82,8 +81,7 @@ void TickToKlineHelper::KLineFromLocalData(const std::string &sFilePath, const s
 	std::cout << "k线生成成功" << std::endl;
 }
 
-void TickToKlineHelper::KLineFromRealtimeData(CThostFtdcDepthMarketDataField *pDepthMarketData)
-{
+void TickToKlineHelper::KLineFromRealtimeData(CThostFtdcDepthMarketDataField *pDepthMarketData) {
 	m_priceVec.push_back(pDepthMarketData->LastPrice);
 	m_volumeVec.push_back(pDepthMarketData->Volume);
 	if (m_priceVec.size() == kDataLineNum)
