@@ -1,6 +1,6 @@
 # CTP_simulation. for simnow test env
 
-- 破土动工：2022.11.3
+- 破土动工：2024.4.11
 
 - coding path:
   - implementation of basic market data session module
